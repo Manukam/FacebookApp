@@ -1,1 +1,1 @@
-<?php header( 'Location: /fbApp.html' ) ;  ?>
+<?php header( 'Location: fbApp.html' ) ;  ?>
