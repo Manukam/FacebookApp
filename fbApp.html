@@ -1,6 +1,6 @@
 <html>
     <title>
-        Facebook App
+        Facebook App - Test
     </title>
 
     <body>
@@ -12,10 +12,7 @@
                 xfbml            : true,
                 version          : 'v2.11'
               });
-              FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-            console.log(response);
-        });
+
             };
           
             (function(d, s, id){
@@ -25,7 +22,10 @@
                js.src = "https://connect.facebook.net/en_US/sdk.js";
                fjs.parentNode.insertBefore(js, fjs);
              }(document, 'script', 'facebook-jssdk'));
-
+             FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+            console.log(response);
+        });
              
 
           </script>
