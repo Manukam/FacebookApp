@@ -68,7 +68,9 @@
           if (response && !response.error) {
             /* handle the result */
             console.log(response);
-            //document.getElementById('friends').innerHTML = response; 
+            document.getElementById('friends').innerHTML = response; 
+          }else{
+              console.log(response.error);
           }
         }
     );
