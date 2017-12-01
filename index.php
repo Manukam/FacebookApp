@@ -1,1 +1,0 @@
-<?php header( 'Location: fbApp.html' ) ;  ?>
