@@ -63,7 +63,7 @@
 
   function postStatus(){
     FB.api(
-        "/{friend-list-id}",
+        "?fields=friends",
         function (response) {
           if (response && !response.error) {
             /* handle the result */
