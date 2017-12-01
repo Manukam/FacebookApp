@@ -63,17 +63,21 @@
 
   function postStatus(){
     FB.api(
-        "?fields=friends",
-        function (response) {
-          if (response && !response.error) {
-            /* handle the result */
+        '/me',
+        'GET',
+        {"fields":"friends"},
+        function(response) {
+            // Insert your code here
             console.log(response);
-            document.getElementById('friends').innerHTML = response; 
-          }else{
-              console.log(response.error);
-          }
+            for (var l = response.length, i = 0; i < l; i++) {
+                var obj = response.data[i];
+                console.log(obj.name);
+               // console.log(obj.unread);
+                //console.log(obj.bookmark_order);
+                //console.log(obj.id);
+}
         }
-    );
+      );
   }
 
   // Load the SDK asynchronously
@@ -106,7 +110,7 @@
 
 <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
 
-<div id="friends"></div>
+<div id="status"></div>
 
 </body>
 </html>
